@@ -1,7 +1,39 @@
+<!DOCTYPE html>
+
 <head>
     <title>hello</title>
     <link rel="stylesheet" href="style.css">
+
+    <script src= "https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src= "https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
 <body>
-    <h1>bleh</h1>
+    <div class="main">
+
+        <h1>bleh</h1>
+
+        <div class="flex items-center gap-3">
+            <img id="avatar" class="avatar" src="https://cdn.discordapp.com/avatars/828328151914119188/3478231977f7a1fd940d99a4d07706c3.png"></img>
+            <div class="flex flex-col">
+                <h1>adra blwnawish</h1>
+                <h2>adasdadas</h2>
+            </div>
+         </div>
+
+        <script type="text/babel">
+            let av = "https://cdn.discordapp.com/avatars/828328151914119188/3478231977f7a1fd940d99a4d07706c3.png";
+
+            if (document.referrer === "https://twitter.com/blwnawish") {
+                av = "https://pbs.twimg.com/profile_images/1734416378814136321/CmThBVEJ_400x400.jpg"
+            } else if (document.referrer === "https://osu.ppy.sh/users/10891668") {
+                av = "https://a.ppy.sh/10891668?1710108278.jpeg"
+            }
+
+            ReactDOM.render(
+                <img src={av}></img>,
+                document.getElementById("avatar")
+            );
+        </script>
+    </div>
 </body>
