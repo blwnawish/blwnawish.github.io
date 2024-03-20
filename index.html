@@ -4,14 +4,14 @@
     <title>hello</title>
     <link rel="stylesheet" href="style.css">
 
-    <script src= "https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <!-- <script src= "https://unpkg.com/react@16/umd/react.production.min.js"></script>
     <script src= "https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script> -->
 </head>
 <body>
     <div class="main">
         <div class="flex items-center gap-3 pad-3">
-            <img id="avatar" class="avatar" src="https://cdn.discordapp.com/avatars/828328151914119188/3478231977f7a1fd940d99a4d07706c3.png"></img>
+            <img class="circle avatar" src="https://cdn.discordapp.com/avatars/828328151914119188/3478231977f7a1fd940d99a4d07706c3.png"></img>
             <div class="flex flex-col gap-3">
                 <h1 class="nm bold">adra blwnawish</h1>
                 <h2 class="nm light">ne obliviscaris #1 fan</h2>
@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <script type="text/babel">
+        <script>
             let av = "https://cdn.discordapp.com/avatars/828328151914119188/3478231977f7a1fd940d99a4d07706c3.png";
 
             if (document.referrer === "https://twitter.com/") {
@@ -27,11 +27,10 @@
             } else if (document.referrer === "https://osu.ppy.sh/") {
                 av = "https://a.ppy.sh/10891668?1710108278.jpeg"
             }
-
-            ReactDOM.render(
-                <img src={av}></img>,
-                document.getElementById("avatar")
-            );
+            
+            document.getElementsByClassName("avatar").array.forEach((element) => {
+                element.setAttribute("src", av);
+            });
         </script>
     </div>
 </body>
