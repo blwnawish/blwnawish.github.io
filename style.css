@@ -1,5 +1,10 @@
 body {
     background-color: #B5E5FF;
+    color: #37454C;
+}
+
+h1, h2 {
+    margin: 0;
 }
 
 .flex {
@@ -18,6 +23,18 @@ body {
     gap: 0.75rem;
 }
 
+.pad-3 {
+    padding: 2rem;
+}
+
+.bold {
+    color: #37454C;
+}
+
+.light {
+    color: #647F8C;
+}
+
 .main {
     background-color: #C6C7FF;
     border: 2px solid #E1A9F6;
@@ -25,11 +42,10 @@ body {
     font-family: Atkinson Hyperlegible, sans-serif;
     max-width: 100%;
     position: relative;
-    top: 80px;
+    top: 20px;
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
